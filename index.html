@@ -6,20 +6,14 @@
     <title>Samet Kaya | Software Engineer</title>
     <meta name="description" content="Samet Kaya'nın Kişisel Portfolyosu - Software Engineer & Full-Stack Developer.">
     
-    <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Background Animation Elements -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
@@ -27,28 +21,32 @@
         <div class="nav-container">
             <a href="#" class="logo">Samet<span>Ky</span>.</a>
             <ul class="nav-links">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#experience">Deneyim</a></li>
-                <li><a href="#certifications">Sertifikalar</a></li>
-                <li><a href="#skills">Yetenekler</a></li>
+                <li><a href="#home" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="#about" class="lang-text" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                <li><a href="#experience" class="lang-text" data-tr="Deneyim" data-en="Experience">Deneyim</a></li>
+                <li><a href="#certifications" class="lang-text" data-tr="Sertifikalar" data-en="Certifications">Sertifikalar</a></li>
+                <li><a href="#skills" class="lang-text" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle Dark/Light Mode"><i class="fas fa-sun"></i></button>
+                <button id="lang-toggle" class="control-btn lang-btn" aria-label="Toggle Language">EN</button>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <p class="greeting">Merhaba, Ben</p>
+            <p class="greeting lang-text" data-tr="Merhaba, Ben" data-en="Hello, I am">Merhaba, Ben</p>
             <h1 class="name">Samet Kaya</h1>
             <h2 class="title"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
-            <p class="description">
+            <p class="description lang-text" data-tr="İstanbul Gelişim Üniversitesi Yazılım Mühendisliği mezunuyum. Backend ve güvenli yazılım geliştirme alanlarında uzmanlaşıyor; bilgi birikimimi yenilikçi, güvenli ve ölçeklenebilir çözümlere dönüştürüyorum." data-en="Software Engineering graduate from Istanbul Gelisim University. I specialize in backend and secure software development, transforming my knowledge into innovative, secure, and scalable solutions.">
                 İstanbul Gelişim Üniversitesi Yazılım Mühendisliği mezunuyum. Backend ve güvenli yazılım geliştirme alanlarında uzmanlaşıyor; bilgi birikimimi yenilikçi, güvenli ve ölçeklenebilir çözümlere dönüştürüyorum.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">İletişime Geç</a>
+                <a href="mailto:sametky1909@gmail.com" class="btn btn-primary lang-text" data-tr="Bana Ulaşın" data-en="Contact Me">Bana Ulaşın</a>
                 <a href="https://github.com/SametKy192" target="_blank" class="btn btn-secondary">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -63,26 +61,26 @@
 
     <section id="about" class="about section-padding reveal">
         <div class="section-title">
-            <h2>Hakkımda</h2>
+            <h2 class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
             <div class="underline"></div>
         </div>
         <div class="about-content grid-2">
             <div class="about-text glass-card">
-                <h3>Kısaca Ben</h3>
-                <p>
+                <h3 class="lang-text" data-tr="Kısaca Ben" data-en="In Short">Kısaca Ben</h3>
+                <p class="lang-text" data-tr="Lisans eğitimim boyunca yazılım geliştirme ve siber güvenlik alanlarına yoğunlaştım. Özellikle backend geliştirme, güvenli yazılım geliştirme teknikleri ve ağ güvenliği konularında kendimi geliştirme fırsatı buldum." data-en="During my undergraduate studies, I focused on software development and cybersecurity. I specifically had the opportunity to improve myself in backend development, secure software engineering, and network security.">
                     Lisans eğitimim boyunca yazılım geliştirme ve siber güvenlik alanlarına yoğunlaştım. Özellikle backend geliştirme, güvenli yazılım geliştirme teknikleri ve ağ güvenliği konularında kendimi geliştirme fırsatı buldum. 
                 </p>
-                <p>
+                <p class="lang-text" data-tr="Proje tabanlı çalışmalarla teorik bilgiyi pratiğe dönüştürerek yazılım alanında derinleşmeyi hedefledim. Şimdi, bu birikimi sektörde daha güçlü adımlarla ilerletmek ve sürekli öğrenmeye devam etmek için hazırım." data-en="Through project-based works, I aimed to deepen my expertise in software by putting theoretical knowledge into practice. Now, I am ready to advance this foundation with stronger steps in the industry while continuously learning.">
                     Proje tabanlı çalışmalarla teorik bilgiyi pratiğe dönüştürerek yazılım alanında derinleşmeyi hedefledim. Şimdi, bu birikimi sektörde daha güçlü adımlarla ilerletmek ve sürekli öğrenmeye devam etmek için hazırım.
                 </p>
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>İGÜ - Yazılım Mühendisliği & Bilgisayar Müh. (YL)</span>
+                        <span class="lang-text" data-tr="İGÜ - Yazılım Mühendisliği & Bilgisayar Müh. (YL)" data-en="IGU - Software Eng. & Computer Eng. (Master's)">İGÜ - Yazılım Mühendisliği & Bilgisayar Müh. (YL)</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>İstanbul, Türkiye</span>
+                        <span class="lang-text" data-tr="İstanbul, Türkiye" data-en="Istanbul, Turkey">İstanbul, Türkiye</span>
                     </div>
                 </div>
             </div>
@@ -91,22 +89,22 @@
                 <div class="stat-card glass-card">
                     <i class="fas fa-code-branch"></i>
                     <h4>Full-Stack</h4>
-                    <p>Web Geliştirme</p>
+                    <p class="lang-text" data-tr="Web Geliştirme" data-en="Web Development">Web Geliştirme</p>
                 </div>
                 <div class="stat-card glass-card">
                     <i class="fas fa-server"></i>
                     <h4>Backend</h4>
-                    <p>Güvenli Mimari</p>
+                    <p class="lang-text" data-tr="Güvenli Mimari" data-en="Secure Architecture">Güvenli Mimari</p>
                 </div>
                 <div class="stat-card glass-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h4>Güvenlik</h4>
-                    <p>Siber Güvenlik Farkındalığı</p>
+                    <h4 class="lang-text" data-tr="Güvenlik" data-en="Security">Güvenlik</h4>
+                    <p class="lang-text" data-tr="Siber Güvenlik Farkındalığı" data-en="Cybersecurity Awareness">Siber Güvenlik Farkındalığı</p>
                 </div>
                 <div class="stat-card glass-card">
                     <i class="fas fa-network-wired"></i>
-                    <h4>Ağ Yönetimi</h4>
-                    <p>CCNA Altyapısı</p>
+                    <h4 class="lang-text" data-tr="Ağ Yönetimi" data-en="Network Management">Ağ Yönetimi</h4>
+                    <p class="lang-text" data-tr="CCNA Altyapısı" data-en="CCNA Infrastructure">CCNA Altyapısı</p>
                 </div>
             </div>
         </div>
@@ -114,58 +112,58 @@
 
     <section id="experience" class="projects section-padding reveal">
         <div class="section-title">
-            <h2>Kariyer & Eğitim</h2>
+            <h2 class="lang-text" data-tr="Kariyer & Eğitim" data-en="Career & Education">Kariyer & Eğitim</h2>
             <div class="underline"></div>
         </div>
         
         <div class="grid-2">
             <!-- Experience -->
             <div class="timeline glass-card">
-                <h3 style="margin-bottom: 2rem; color: var(--text-light); border-bottom: 1px solid rgba(102, 252, 241, 0.2); padding-bottom: 0.5rem;"><i class="fas fa-briefcase"></i> İş Deneyimi</h3>
+                <h3 class="timeline-title"><i class="fas fa-briefcase"></i> <span class="lang-text" data-tr="İş Deneyimi" data-en="Work Experience">İş Deneyimi</span></h3>
                 
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--primary-color);">Software Development Specialist</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">CBERNET Bilgi Teknolojileri Danışmanlık A.Ş.</p>
-                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-calendar-alt"></i> Ağu 2025 - Halen (Uzaktan)</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary">Software Development Specialist</h4>
+                    <p class="text-bold">CBERNET Bilgi Teknolojileri Danışmanlık A.Ş.</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="Ağu 2025 - Halen (Uzaktan)" data-en="Aug 2025 - Present (Remote)">Ağu 2025 - Halen (Uzaktan)</span></p>
                 </div>
 
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--primary-color);">Yazılım Mühendisi</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">İstanbul Gelişim Üniversitesi TTO</p>
-                    <p style="font-size: 0.9rem;"><i class="fas fa-calendar-alt"></i> May 2024 - Ağu 2025 (Yerinde)</p>
-                    <p style="font-size: 0.85rem; margin-top: 0.3rem;">Kullanılan Teknolojiler: ADO.NET ve diğer backend teknolojileri.</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary lang-text" data-tr="Yazılım Mühendisi" data-en="Software Engineer">Yazılım Mühendisi</h4>
+                    <p class="text-bold">İstanbul Gelişim Üniversitesi TTO</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="May 2024 - Ağu 2025 (Yerinde)" data-en="May 2024 - Aug 2025 (On-site)">May 2024 - Ağu 2025 (Yerinde)</span></p>
+                    <p class="text-desc lang-text" data-tr="Teknolojiler: ADO.NET ve diğer backend teknolojileri." data-en="Technologies: ADO.NET and other backend technologies.">Teknolojiler: ADO.NET ve diğer backend teknolojileri.</p>
                 </div>
 
-                <div>
-                    <h4 style="color: var(--primary-color);">Frontend Developer (Staj)</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">Atlasec Teknoloji</p>
-                    <p style="font-size: 0.9rem;"><i class="fas fa-calendar-alt"></i> Tem 2023 - Eyl 2023 (Maltepe Teknopark)</p>
-                    <p style="font-size: 0.85rem; margin-top: 0.3rem;">Kullanılan Teknolojiler: React JS, Next JS, JavaScript.</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary lang-text" data-tr="Frontend Developer (Staj)" data-en="Frontend Developer (Intern)">Frontend Developer (Staj)</h4>
+                    <p class="text-bold">Atlasec Teknoloji</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="Tem 2023 - Eyl 2023 (Maltepe Teknopark)" data-en="Jul 2023 - Sep 2023 (Maltepe Technopark)">Tem 2023 - Eyl 2023 (Maltepe Teknopark)</span></p>
+                    <p class="text-desc lang-text" data-tr="Teknolojiler: React JS, Next JS, JavaScript." data-en="Technologies: React JS, Next JS, JavaScript.">Teknolojiler: React JS, Next JS, JavaScript.</p>
                 </div>
             </div>
 
             <!-- Education -->
             <div class="timeline glass-card">
-                <h3 style="margin-bottom: 2rem; color: var(--text-light); border-bottom: 1px solid rgba(102, 252, 241, 0.2); padding-bottom: 0.5rem;"><i class="fas fa-graduation-cap"></i> Eğitim Geçmişi</h3>
+                <h3 class="timeline-title"><i class="fas fa-graduation-cap"></i> <span class="lang-text" data-tr="Eğitim Geçmişi" data-en="Education Background">Eğitim Geçmişi</span></h3>
                 
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--primary-color);">Yüksek Lisans, Bilgisayar Mühendisliği</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">İstanbul Gelişim Üniversitesi</p>
-                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-calendar-alt"></i> Eyl 2025 - Tem 2027</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary lang-text" data-tr="Yüksek Lisans, Bilgisayar Mühendisliği" data-en="Master of Science, Computer Engineering">Yüksek Lisans, Bilgisayar Mühendisliği</h4>
+                    <p class="text-bold lang-text" data-tr="İstanbul Gelişim Üniversitesi" data-en="Istanbul Gelisim University">İstanbul Gelişim Üniversitesi</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="Eyl 2025 - Tem 2027" data-en="Sep 2025 - Jul 2027">Eyl 2025 - Tem 2027</span></p>
                 </div>
 
-                <div style="margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--primary-color);">Lisans, Yazılım Mühendisliği</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">İstanbul Gelişim Üniversitesi</p>
-                    <p style="font-size: 0.9rem;"><i class="fas fa-calendar-alt"></i> Eyl 2021 - Tem 2025</p>
-                    <p style="font-size: 0.85rem; margin-top: 0.3rem;">Tam Burslu Eğitim, Diploma Notu: 3.12</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary lang-text" data-tr="Lisans, Yazılım Mühendisliği" data-en="Bachelor of Science, Software Engineering">Lisans, Yazılım Mühendisliği</h4>
+                    <p class="text-bold lang-text" data-tr="İstanbul Gelişim Üniversitesi" data-en="Istanbul Gelisim University">İstanbul Gelişim Üniversitesi</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="Eyl 2021 - Tem 2025" data-en="Sep 2021 - Jul 2025">Eyl 2021 - Tem 2025</span></p>
+                    <p class="text-desc lang-text" data-tr="Tam Burslu Eğitim, Diploma Notu: 3.12" data-en="Full Scholarship, GPA: 3.12">Tam Burslu Eğitim, Diploma Notu: 3.12</p>
                 </div>
 
-                <div>
-                    <h4 style="color: var(--primary-color);">CCNA-1 Sertifikasyonu</h4>
-                    <p style="font-weight: bold; color: var(--text-light);">Cisco Networking Academy</p>
-                    <p style="font-size: 0.9rem;"><i class="fas fa-calendar-alt"></i> Eyl 2022 - Oca 2023</p>
-                    <p style="font-size: 0.85rem; margin-top: 0.3rem;">Ağ Teknolojileri, Sorun Giderme ve Çözüm Üretimi.</p>
+                <div class="timeline-item">
+                    <h4 class="text-primary lang-text" data-tr="CCNA-1 Sertifikasyonu" data-en="CCNA-1 Certification">CCNA-1 Sertifikasyonu</h4>
+                    <p class="text-bold">Cisco Networking Academy</p>
+                    <p class="text-small"><i class="fas fa-calendar-alt"></i> <span class="lang-text" data-tr="Eyl 2022 - Oca 2023" data-en="Sep 2022 - Jan 2023">Eyl 2022 - Oca 2023</span></p>
+                    <p class="text-desc lang-text" data-tr="Ağ Teknolojileri, Sorun Giderme ve Çözüm Üretimi." data-en="Network Technologies, Troubleshooting and Problem Solving.">Ağ Teknolojileri, Sorun Giderme ve Çözüm Üretimi.</p>
                 </div>
             </div>
         </div>
@@ -173,30 +171,30 @@
 
     <section id="certifications" class="section-padding reveal">
         <div class="section-title">
-            <h2>Sertifikalar ve Başarılar</h2>
+            <h2 class="lang-text" data-tr="Sertifikalar ve Başarılar" data-en="Certifications & Achievements">Sertifikalar ve Başarılar</h2>
             <div class="underline"></div>
         </div>
         <div class="grid-2">
             <div class="glass-card">
-                <h3 style="margin-bottom: 1.5rem; color: var(--text-light);"><i class="fas fa-shield-alt"></i> Siber Güvenlik & Sistem</h3>
+                <h3 class="timeline-title"><i class="fas fa-shield-alt"></i> <span class="lang-text" data-tr="Siber Güvenlik & Sistem" data-en="Cyber Security & Systems">Siber Güvenlik & Sistem</span></h3>
                 <ul class="cert-list">
                     <li><i class="fas fa-award"></i> <div><span class="cert-title">Certified Associate Penetration Tester</span> <span class="cert-org">Hackviser (2025)</span></div></li>
                     <li><i class="fas fa-award"></i> <div><span class="cert-title">Cybersecurity Analyst Program Participant</span> <span class="cert-org">Akbank (2023)</span></div></li>
                     <li><i class="fas fa-award"></i> <div><span class="cert-title">CCNA: Introduction to Networks</span> <span class="cert-org">Cisco (2023)</span></div></li>
                     <li><i class="fas fa-award"></i> <div><span class="cert-title">Cybersecurity Essentials</span> <span class="cert-org">Cisco (2022)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">DoS / DDos Saldırıları ve Koruma</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">NDG LİNUX & Ağ Temelleri</span> <span class="cert-org">Akbank / BTK (2022)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="DoS / DDos Saldırıları ve Koruma" data-en="DoS / DDos Attacks & Defense">DoS / DDos Saldırıları ve Koruma</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="NDG LİNUX & Ağ Temelleri" data-en="NDG LINUX & Networking Basics">NDG LİNUX & Ağ Temelleri</span> <span class="cert-org">Akbank / BTK (2022)</span></div></li>
                 </ul>
             </div>
             <div class="glass-card">
-                <h3 style="margin-bottom: 1.5rem; color: var(--text-light);"><i class="fas fa-code"></i> Yazılım & Uygulama Mimari</h3>
+                <h3 class="timeline-title"><i class="fas fa-code"></i> <span class="lang-text" data-tr="Yazılım & Uygulama Mimari" data-en="Software & App Architecture">Yazılım & Uygulama Mimari</span></h3>
                 <ul class="cert-list">
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">Sıfırdan İleri Düzey Web Programlama</span> <span class="cert-org">Techcareer.net (2024)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">Google Flutter ile Mobil Uygulama</span> <span class="cert-org">BTK Akademi (2024)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">Giriş Seviye React Native 101</span> <span class="cert-org">Techcareer.net (2024)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">C# & Uygulama Geliştirme</span> <span class="cert-org">BTK / Udemy (2023-2024)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">SQL, JAVA, CSS, HTML5 Temelleri</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
-                    <li><i class="fas fa-award"></i> <div><span class="cert-title">Yazılım Proje Yönetimi</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="Sıfırdan İleri Düzey Web Programlama" data-en="Zero to Advanced Web Programming">Sıfırdan İleri Düzey Web Programlama</span> <span class="cert-org">Techcareer.net (2024)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="Google Flutter ile Mobil Uygulama" data-en="Mobile App Dev with Google Flutter">Google Flutter ile Mobil Uygulama</span> <span class="cert-org">BTK Akademi (2024)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="Giriş Seviye React Native 101" data-en="Introductory React Native 101">Giriş Seviye React Native 101</span> <span class="cert-org">Techcareer.net (2024)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="C# & Uygulama Geliştirme" data-en="C# & Application Development">C# & Uygulama Geliştirme</span> <span class="cert-org">BTK / Udemy (2023-2024)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="SQL, JAVA, CSS, HTML5 Temelleri" data-en="SQL, JAVA, CSS, HTML5 Basics">SQL, JAVA, CSS, HTML5 Temelleri</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
+                    <li><i class="fas fa-award"></i> <div><span class="cert-title" class="lang-text" data-tr="Yazılım Proje Yönetimi" data-en="Software Project Management">Yazılım Proje Yönetimi</span> <span class="cert-org">BTK Akademi (2023)</span></div></li>
                 </ul>
             </div>
         </div>
@@ -204,12 +202,12 @@
 
     <section id="skills" class="skills section-padding reveal">
         <div class="section-title">
-            <h2>Yeteneklerim</h2>
+            <h2 class="lang-text" data-tr="Yeteneklerim" data-en="My Skills">Yeteneklerim</h2>
             <div class="underline"></div>
         </div>
         <div class="skills-container grid-2">
             <div class="skill-category glass-card">
-                <h3>Yazılım Geliştirme</h3>
+                <h3 class="lang-text" data-tr="Yazılım Geliştirme" data-en="Software Development">Yazılım Geliştirme</h3>
                 <div class="skill-tags">
                     <span>C# / .NET Core</span>
                     <span>ADO.NET</span>
@@ -222,14 +220,14 @@
                 </div>
             </div>
             <div class="skill-category glass-card">
-                <h3>Güvenlik & Sistem</h3>
+                <h3 class="lang-text" data-tr="Güvenlik & Sistem" data-en="Security & Systems">Güvenlik & Sistem</h3>
                 <div class="skill-tags">
-                    <span>Siber Güvenlik Farkındalığı</span>
-                    <span>Güvenli Yazılım Geliştirme</span>
-                    <span>Ağ Güvenliği (Network Security)</span>
+                    <span class="lang-text" data-tr="Siber Güvenlik Farkındalığı" data-en="Cybersec Awareness">Siber Güvenlik Farkındalığı</span>
+                    <span class="lang-text" data-tr="Güvenli Yazılım Geliştirme" data-en="Secure Coding">Güvenli Yazılım Geliştirme</span>
+                    <span class="lang-text" data-tr="Ağ Güvenliği" data-en="Network Security">Ağ Güvenliği (Network Security)</span>
                     <span>Cisco CCNA</span>
-                    <span>Sorun Giderme</span>
-                    <span>Araştırma & Proje Yönetimi</span>
+                    <span class="lang-text" data-tr="Sorun Giderme" data-en="Troubleshooting">Sorun Giderme</span>
+                    <span class="lang-text" data-tr="Araştırma & Proje Yönetimi" data-en="Research & Management">Araştırma & Proje Yönetimi</span>
                 </div>
             </div>
         </div>
@@ -237,17 +235,19 @@
 
     <footer id="contact">
         <div class="footer-content">
-            <h2>Bağlantıda Kalalım</h2>
-            <p>Eğer bir projeniz varsa veya yazılım ve siber güvenlik üzerine sohbet etmek isterseniz, bana ulaşmaktan çekinmeyin.</p>
+            <h2 class="lang-text" data-tr="Bağlantıda Kalalım" data-en="Let's Connect">Bağlantıda Kalalım</h2>
+            <p class="lang-text" data-tr="Eğer bir projeniz varsa veya yazılım/siber güvenlik üzerine sohbet etmek isterseniz, bana ulaşmaktan çekinmeyin." data-en="If you have a project in mind or just want to chat about software/cybersecurity, feel free to reach out.">
+                Eğer bir projeniz varsa veya yazılım ve siber güvenlik üzerine sohbet etmek isterseniz, bana ulaşmaktan çekinmeyin.
+            </p>
             <div class="social-links">
+                <a href="mailto:sametky1909@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/samet-kaya-307195229/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/SametKy192" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            <p class="copyright">&copy; <span id="year"></span> Samet Kaya. Tüm Hakları Saklıdır.</p>
+            <p class="copyright">&copy; <span id="year"></span> Samet Kaya. <span class="lang-text" data-tr="Tüm Hakları Saklıdır." data-en="All Rights Reserved.">Tüm Hakları Saklıdır.</span></p>
         </div>
     </footer>
 
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>

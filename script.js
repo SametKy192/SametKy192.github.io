@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close menu when a link is clicked
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Sticky Navbar background on scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -41,11 +39,64 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Language & Theme logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const langToggle  = document.getElementById('lang-toggle');
+    const body = document.body;
+    let isTypingActive = true;
+
+    // Load Theme Preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.setAttribute('data-theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'light') {
+            body.removeAttribute('data-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.setAttribute('data-theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Translations for Typing text
+    const typeDict = {
+        tr: ["Software Engineer", "Full-Stack Developer", "Yazılım Mühendisi"],
+        en: ["Software Engineer", "Full-Stack Developer", "Bug Hunter"]
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'tr';
+    let textArray = typeDict[currentLang];
+
+    function updateLanguageDOM(lang) {
+        document.querySelectorAll('.lang-text').forEach(el => {
+            if (el.getAttribute(`data-${lang}`)) {
+                el.innerText = el.getAttribute(`data-${lang}`);
+            }
+        });
+        langToggle.innerText = lang === 'tr' ? 'EN' : 'TR';
+        textArray = typeDict[lang];
+    }
+
+    if (currentLang === 'en') {
+        updateLanguageDOM('en');
+    }
+
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'tr' ? 'en' : 'tr';
+        localStorage.setItem('lang', currentLang);
+        updateLanguageDOM(currentLang);
+    });
+
     // Typing Effect
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     
-    const textArray = ["Software Engineer", "Full-Stack Developer", "Yazılım Mühendisi"];
     const typingDelay = 100;
     const erasingDelay = 50;
     const newTextDelay = 2000;
@@ -53,26 +104,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
     
     function type() {
+        if (!isTypingActive) return;
         if (charIndex < textArray[textArrayIndex].length) {
             if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
             typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
             charIndex++;
             setTimeout(type, typingDelay);
-        } 
-        else {
+        } else {
             cursorSpan.classList.remove("typing");
             setTimeout(erase, newTextDelay);
         }
     }
     
     function erase() {
+        if (!isTypingActive) return;
         if (charIndex > 0) {
             if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
             typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
             charIndex--;
             setTimeout(erase, erasingDelay);
-        } 
-        else {
+        } else {
             cursorSpan.classList.remove("typing");
             textArrayIndex++;
             if(textArrayIndex >= textArray.length) textArrayIndex = 0;
@@ -82,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if(textArray.length) setTimeout(type, newTextDelay + 250);
 
-    // Scroll Reveal Animation
+    // Scroll Reveal
     function reveal() {
         var reveals = document.querySelectorAll(".reveal");
         for (var i = 0; i < reveals.length; i++) {
@@ -95,7 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     window.addEventListener("scroll", reveal);
-    
-    // Trigger reveal initially
     reveal();
 });
