@@ -293,7 +293,7 @@ body {
 
 .btn-primary {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--bg-color);
     border: 2px solid var(--primary-color);
 }
 
