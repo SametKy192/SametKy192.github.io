@@ -637,3 +637,34 @@ footer {
         text-align: center;
     }
 }
+
+/* Certifications Section */
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+.cert-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.cert-list li:last-child {
+    border-bottom: none;
+}
+.cert-list i {
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+}
+.cert-title {
+    color: var(--text-light);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.cert-org {
+    color: var(--primary-dim);
+    font-size: 0.85rem;
+}
